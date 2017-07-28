@@ -1,0 +1,23 @@
+create table h_event(
+	h_event_seq number not null primary key,
+	h_event_price varchar2(20),
+	h_event_date varchar2(20) not null,
+	h_event_division varchar2(20) not null,
+	h_event_mainimage varchar2(100) not null,
+	h_event_subject varchar2(30) not null,
+	h_event_content varchar2(200) not null,
+	h_event_content2 varchar2(200),
+	h_event_content3 varchar2(200),
+	h_event_content4 varchar2(200),
+	h_event_content5 varchar2(200),
+	h_event_detailimage varchar2(100) not null,
+	h_event_detailimage2 varchar2(100),
+	h_event_detailimage3 varchar2(100),
+	h_event_detailimage4 varchar2(100),
+	h_event_detailimage5 varchar2(100),
+	mem_id varchar2(15),
+	constraint event_hotel_fk1 foreign key (mem_id) references member (mem_id)
+	
+);
+
+create sequence h_event_seq;

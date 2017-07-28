@@ -1,0 +1,15 @@
+create table h_gallery(
+	h_gallery_seq number not null primary key,
+	h_gallery_type varchar2(30) not null,
+	h_gallery_image varchar2(100) not null,
+	h_gallery_subject varchar2(100) not null,
+	h_gallery_content varchar2(100) not null,
+	h_gallery_media varchar2(100) not null,
+	h_gallery_media_subject varchar2(100),
+	h_gallery_media_content varchar2(100),
+	mem_id varchar2(15),
+	
+	constraint gallery_hotel_fk1 foreign key (mem_id) references member (mem_id)
+);
+
+create sequence h_gallery_seq;

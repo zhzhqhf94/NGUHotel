@@ -1,0 +1,17 @@
+create table h_weding(
+  wed_seq number not null primary key,
+  wed_title varchar2(300) not null,
+  wed_filename varchar2(150) not null,
+  wed_topname varchar2(150) not null,
+  wed_midname varchar2(150) not null,
+  wed_lowname varchar2(150),
+  wed_upload blob not null,
+  wed_topload blob not null,
+  wed_midload blob not null,
+  wed_lowload blob,
+  wed_divide number not null,
+  constraint h_wed_fk1 foreign key (mem_id) references member (id)
+);
+
+
+create sequence h_weding_seq;

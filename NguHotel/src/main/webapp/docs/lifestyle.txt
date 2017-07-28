@@ -1,0 +1,18 @@
+create table h_lifestyle(
+  lif_seq number not null primary key,
+  lif_title varchar2(30) not null,
+  lif_retitle varchar2(200) not null,
+  lif_filename varchar2(150) not null,
+  lif_topname varchar2(150) not null,
+  lif_midname varchar2(150) not null,
+  lif_lowname varchar2(150),
+  lif_upload blob not null,
+  lif_topload blob not null,
+  lif_midload blob not null,
+  lif_lowload blob,
+  lif_divide number not null,
+  constraint h_life_fk1 foreign key (mem_id) references member (id)
+);
+create sequence h_lifestyle_seq;
+
+

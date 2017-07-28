@@ -1,0 +1,16 @@
+create table h_qna(
+	qna_seq number not null primary key,
+	qna_type varchar2(50) not null,
+	qna_call varchar2(50),
+	qna_subject varchar2(30) not null,
+	qna_content varchar2(200) not null,
+	qna_name varchar2(20) not null,
+	qna_email varchar2(20) not null,
+	qna_phone varchar2(20) not null,
+	qna_call varchar2(20),
+	mem_id varchar2(15),
+	
+	constraint qna_hotel_fk1 foreign key (mem_id) references member (mem_id)	
+);
+
+create sequence h_qna;
